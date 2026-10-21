@@ -1,0 +1,109 @@
+{
+  "courses": [
+    {
+      "id": "probability",
+      "name": "概率论与数理统计",
+      "priority": 5,
+      "status": "进行中",
+      "chapter": "第二章",
+      "ddl": "2026-10-24",
+      "tasks": [
+        {"name": "第二章作业（11题+2理解题）", "done": false, "deadline": "2026-10-24"}
+      ],
+      "notes": [
+        "第一章已全部收官：独立性、全概率⇄贝叶斯、伯努利→二项→多项、概率连续性",
+        "上次作业赶太快没沉淀，下次做作业前用'3步回魂法'复习",
+        "核心方法：先几何直觉，再代数推导"
+      ]
+    },
+    {
+      "id": "maogai",
+      "name": "毛泽东思想和中国特色社会主义理论体系概论",
+      "priority": 3,
+      "status": "进行中",
+      "chapter": "第三章进行中",
+      "ddl": "多个",
+      "tasks": [
+        {"name": "实践报告选题（小组）", "done": false, "deadline": "2026-10-23"},
+        {"name": "微电影拍摄+剪辑", "done": false, "deadline": "2026-10-27"},
+        {"name": "第七周小组展示", "done": false, "deadline": "2026-10-30"},
+        {"name": "实践报告终稿", "done": false, "deadline": "第13周"}
+      ],
+      "notes": [
+        "第二章（新民主主义革命）必考，优先级最高",
+        "展示方向已定：鞍钢→基建狂魔，现实→历史→现实闭环",
+        "微电影剧本《Proceed》，饰演组长方可言",
+        "实践报告选题提案：大学生项目竞赛信息差调查"
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "大学物理（电磁场）",
+      "priority": 4,
+      "status": "欠账中",
+      "chapter": "矢量分析待补",
+      "ddl": "待定",
+      "tasks": [
+        {"name": "补矢量分析基础（梯度/散度/旋度）", "done": false, "deadline": "待定"},
+        {"name": "焦利秤实验报告", "done": false, "deadline": "待定"},
+        {"name": "简谐振动实验报告", "done": false, "deadline": "待定"}
+      ],
+      "notes": [
+        "矢量分析是地基，不补后面越听越懵",
+        "先判断新课讲到哪了、急不急，再决定补的节奏",
+        "优先搞懂几何意义，不急于算题"
+      ]
+    },
+    {
+      "id": "data-structure",
+      "name": "数据结构",
+      "priority": 4,
+      "status": "有欠账",
+      "chapter": "实验代码需补交",
+      "ddl": "待定",
+      "tasks": [
+        {"name": "整理落下了哪几道实验题", "done": false, "deadline": "2026-10-22"},
+        {"name": "从最简单的一道开始补", "done": false, "deadline": "待定"}
+      ],
+      "notes": [
+        "本项目本身就是数据结构练手——用代码管理自己的学习数据",
+        "学一个数据结构，就给自己的系统升一级",
+        "升级路线：列表→字典→图→优先队列"
+      ]
+    },
+    {
+      "id": "english",
+      "name": "英语",
+      "priority": 3,
+      "status": "待建立体系",
+      "chapter": "输出能力优先",
+      "ddl": "长期",
+      "tasks": [
+        {"name": "知乎第一篇中文稿", "done": false, "deadline": "待定"},
+        {"name": "英语拆信项目第2封", "done": false, "deadline": "待定"}
+      ],
+      "notes": [
+        "策略：不硬学，用输出倒逼输入",
+        "先写中文，再翻英文，翻译过程中自然长进",
+        "场景导向：小组讨论、课堂展示、提问、控场"
+      ]
+    },
+    {
+      "id": "mascot-design",
+      "name": "椰邮雁吉祥物设计",
+      "priority": 2,
+      "status": "v1待微调",
+      "chapter": "投稿准备中",
+      "ddl": "2026-10-31",
+      "tasks": [
+        {"name": "v1微调", "done": false, "deadline": "待定"},
+        {"name": "300字创作理念", "done": false, "deadline": "待定"},
+        {"name": "投稿邮件", "done": false, "deadline": "2026-10-31"}
+      ],
+      "notes": [
+        "海南校区吉祥物，椰邮雁（椰子+邮政+大雁）",
+        "v1已有基础，微调后即可投稿"
+      ]
+    }
+  ]
+}
