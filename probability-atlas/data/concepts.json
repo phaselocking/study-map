@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "concepts": [
+    {
+      "id": "measure",
+      "name": "概率测度",
+      "aliases": [
+        "测量",
+        "概率公理"
+      ],
+      "description": "用满足公理的集合函数描述事件的概率。",
+      "lessonIds": [
+        "2026-09-17",
+        "2026-09-21"
+      ],
+      "relations": []
+    },
+    {
+      "id": "continuity",
+      "name": "概率连续性",
+      "aliases": [
+        "连续性",
+        "可列可加性"
+      ],
+      "description": "把单调事件列的极限与概率联系起来。",
+      "lessonIds": [
+        "2026-09-21",
+        "2026-09-28",
+        "2026-10-08"
+      ],
+      "relations": []
+    },
+    {
+      "id": "conditional-probability",
+      "name": "条件概率",
+      "aliases": [
+        "乘法公式"
+      ],
+      "description": "在一个已知事件发生的条件下研究另一事件。",
+      "lessonIds": [
+        "2026-09-24",
+        "2026-10-29"
+      ],
+      "relations": [
+        {
+          "targetId": "total-bayes",
+          "type": "classroom",
+          "text": "老师重用同一个摸球模型连接条件概率、全概率和贝叶斯。",
+          "sources": [
+            {
+              "lessonId": "2026-09-28",
+              "sourceId": "transcript",
+              "timestamp": "00:29:45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "total-bayes",
+      "name": "全概率与贝叶斯",
+      "aliases": [
+        "先验",
+        "后验",
+        "信息更新"
+      ],
+      "description": "分类求结果，以及已知结果后的条件更新。",
+      "lessonIds": [
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-08"
+      ],
+      "relations": []
+    },
+    {
+      "id": "independence",
+      "name": "独立性",
+      "aliases": [
+        "相互独立",
+        "两两独立"
+      ],
+      "description": "发生与否不改变另一事件的概率规律；需明确假设。",
+      "lessonIds": [
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-12"
+      ],
+      "relations": []
+    },
+    {
+      "id": "binomial",
+      "name": "二项分布",
+      "aliases": [
+        "伯努利",
+        "多项分布"
+      ],
+      "description": "独立重复试验中的成功次数及其推广。",
+      "lessonIds": [
+        "2026-09-28",
+        "2026-10-12"
+      ],
+      "relations": []
+    },
+    {
+      "id": "random-variable",
+      "name": "随机变量",
+      "aliases": [
+        "逆像",
+        "映射"
+      ],
+      "description": "通过实值函数把事件研究引到实数空间。",
+      "lessonIds": [
+        "2026-10-08"
+      ],
+      "relations": []
+    },
+    {
+      "id": "cdf",
+      "name": "CDF",
+      "aliases": [
+        "分布函数",
+        "累积分布"
+      ],
+      "description": "用阈值事件的概率统一描述随机变量的分布。",
+      "lessonIds": [
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-22",
+        "2026-10-26"
+      ],
+      "relations": []
+    },
+    {
+      "id": "geometric",
+      "name": "几何分布",
+      "aliases": [
+        "负二项",
+        "首次成功"
+      ],
+      "description": "独立伯努利试验中首次成功前的等待次数。",
+      "lessonIds": [
+        "2026-10-12",
+        "2026-10-15"
+      ],
+      "relations": [
+        {
+          "targetId": "exponential",
+          "type": "classroom",
+          "text": "课堂从几何等待次数引入指数等待时间与无记忆性。",
+          "sources": [
+            {
+              "lessonId": "2026-10-15",
+              "sourceId": "transcript",
+              "timestamp": "00:43:03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "poisson",
+      "name": "泊松分布",
+      "aliases": [
+        "稀有事件",
+        "计数"
+      ],
+      "description": "课堂着重从单位时间计数及时间尺度理解。",
+      "lessonIds": [
+        "2026-10-12",
+        "2026-10-19"
+      ],
+      "relations": [
+        {
+          "targetId": "exponential",
+          "type": "classroom",
+          "text": "课堂把无到达的计数事件与等待超过t的事件对应；完整过程假设仍需核实。",
+          "sources": [
+            {
+              "lessonId": "2026-10-19",
+              "sourceId": "transcript",
+              "timestamp": "00:12:52"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exponential",
+      "name": "指数分布",
+      "aliases": [
+        "无记忆性",
+        "失效率",
+        "等待时间"
+      ],
+      "description": "连续等待时间模型；无记忆性与常数失效率相联系。",
+      "lessonIds": [
+        "2026-10-15",
+        "2026-10-19"
+      ],
+      "relations": []
+    },
+    {
+      "id": "normal",
+      "name": "正态分布",
+      "aliases": [
+        "标准化",
+        "分位点",
+        "二维正态"
+      ],
+      "description": "从一维密度与标准化，延伸到变换及二维条件分布。",
+      "lessonIds": [
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26",
+        "2026-10-29"
+      ],
+      "relations": [
+        {
+          "targetId": "conditional-distribution",
+          "type": "classroom",
+          "text": "二维正态的条件分布仅作几何直观及结果展示。",
+          "sources": [
+            {
+              "lessonId": "2026-10-29",
+              "sourceId": "transcript",
+              "timestamp": "01:24:50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transform",
+      "name": "随机变量函数变换",
+      "aliases": [
+        "分布函数法",
+        "单调变换",
+        "sin X"
+      ],
+      "description": "把新变量的事件转回已知变量，再研究分布。",
+      "lessonIds": [
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ],
+      "relations": [
+        {
+          "targetId": "marginal",
+          "type": "analysis",
+          "text": "整理分析：从前两课的范围分析，到本次投影与截线，是可对照的方法延续。",
+          "sources": [
+            {
+              "lessonId": "2026-10-29",
+              "sourceId": "transcript",
+              "timestamp": "00:33:49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joint",
+      "name": "联合分布",
+      "aliases": [
+        "联合密度",
+        "联合分布律"
+      ],
+      "description": "保留多个变量共同取值及其联系的信息。",
+      "lessonIds": [
+        "2026-10-26",
+        "2026-10-29"
+      ],
+      "relations": [
+        {
+          "targetId": "marginal",
+          "type": "classroom",
+          "text": "课堂明确区分联合的信息与两个边缘的信息。",
+          "sources": [
+            {
+              "lessonId": "2026-10-29",
+              "sourceId": "transcript",
+              "timestamp": "00:08:49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marginal",
+      "name": "边缘分布",
+      "aliases": [
+        "投影法",
+        "行列求和"
+      ],
+      "description": "从联合分布中不再区分其余变量，得到单个变量规律。",
+      "lessonIds": [
+        "2026-10-29"
+      ],
+      "relations": [
+        {
+          "targetId": "conditional-distribution",
+          "type": "classroom",
+          "text": "老师用边缘乘条件解释联合分布的构造。",
+          "sources": [
+            {
+              "lessonId": "2026-10-29",
+              "sourceId": "transcript",
+              "timestamp": "00:47:02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditional-distribution",
+      "name": "条件分布",
+      "aliases": [
+        "条件概率密度",
+        "截线",
+        "固定变量"
+      ],
+      "description": "固定一个变量的条件后，研究另一个变量的分布。",
+      "lessonIds": [
+        "2026-10-29"
+      ],
+      "relations": []
+    }
+  ]
+}

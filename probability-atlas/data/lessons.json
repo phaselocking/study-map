@@ -1,0 +1,2216 @@
+{
+  "schemaVersion": 1,
+  "course": {
+    "title": "概率论与数理统计",
+    "semester": "2026 秋季学期",
+    "progress": {
+      "label": "第三章 · 边缘分布与条件分布",
+      "asOf": "2026-10-29"
+    },
+    "archiveTitle": "Probability Archive｜概率论课堂档案馆"
+  },
+  "sourceTypes": {
+    "teacher_quote": "老师原话（转录）",
+    "transcript_summary": "课堂转录摘要",
+    "ai_analysis": "AI 整理分析",
+    "personal_record": "我的学习记录"
+  },
+  "evidencePolicy": "时间戳为转录段首；课件页码为PDF物理页。老师评分说法不等于已核实的官方规则。无原始录音链接，不生成音频跳转。",
+  "missingMaterials": [
+    "第一章PDF及老师自编连续性习题",
+    "原始音视频、板书和确切投影版本",
+    "正式考试安排与评分细则",
+    "10.29开头约5分钟录音"
+  ],
+  "lessons": [
+    {
+      "id": "2026-09-17",
+      "date": "2026-09-17",
+      "title": "概率作为测量：定义与公理",
+      "summary": "从课程认知与学习方法，进入概率的函数视角和不重复测量。",
+      "conceptIds": [
+        "measure"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:38:21",
+        "segmentCount": 98
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "课程认知与已有基础",
+            "text": "老师默认样本空间与基本集合运算已有基础，主张理解定义和框架。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:51:34",
+                "line": 66
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "曹冲称象引入测量",
+            "text": "用分箱称量解释整体测量、分开测量及不重复测的条件。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:58:12",
+                "line": 71
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "概率公理与有限可加",
+            "text": "从三条公理，讨论空集概率和由可列可加性得到有限情形。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:02:56",
+                "line": 80
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "解释定义的理解作业",
+            "text": "老师要求用自己的方式讲出概率定义的理解过程。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:35:21",
+                "line": 111
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "曹冲称象",
+            "text": "称量大象时，石头分箱且不能重复称，作为可加性的直观类比。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:58:12",
+                "line": 71
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "成绩构成尚未定案",
+            "text": "老师转述平时、期末可能各50%；细项和是否最终执行在当时尚不明确。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:28:54",
+                "line": 42
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "先有不重复测量，后有不交分解",
+            "text": "本次测量类比为9.21的集合分解提供可对照的背景。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:58:12",
+                "line": 71
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "9.17概率.txt",
+          "path": "sources/transcripts/9.17概率.txt",
+          "originalPath": "概率论与数理统计/9.17概率.txt",
+          "kind": "transcript",
+          "sha256": "a74e512c2f3249c09946b1b862f183d8f5b8de919a8a0c2b84bb4ce4cfc1b6d1"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-09-17.json"
+    },
+    {
+      "id": "2026-09-21",
+      "date": "2026-09-21",
+      "title": "不交分解、连续性与几何概型",
+      "summary": "把一般并集变成不交并；从有限计算走到事件列的连续性。",
+      "conceptIds": [
+        "measure",
+        "continuity"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:35:22",
+        "segmentCount": 80
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "一般并集转不交并",
+            "text": "依次从后面的集合中排除前面已有的部分，再使用可加性。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:01:17",
+                "line": 8
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "帽子配对与加法公式",
+            "text": "借配对问题研究至少有一个人取回自己帽子的概率。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:27:11",
+                "line": 40
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "概率连续性",
+            "text": "补充单调事件列及概率极限，进一步讨论零概率事件。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:35:18",
+                "line": 49
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "几何概型的例子",
+            "text": "蒲丰投针与约会问题以均匀模型、面积之比展开。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:11:00",
+                "line": 96
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "概率步骤与计算步骤",
+            "text": "老师要求保留概率公式，冗长计算另做；不是只写答案。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:33:05",
+                "line": 47
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "蒲丰投针",
+            "text": "从针的角度和到平行线的距离刻画相交条件，再使用几何概型。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:11:00",
+                "line": 96
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "卷面保留概率依据",
+            "text": "把微积分长计算放在草稿，试卷保留概率思路和结果；这是老师的课堂要求。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:34:18",
+                "line": 48
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "连续性在CDF处再次使用",
+            "text": "本次补充的概率连续性，在10.8讨论CDF极限和右连续时再次出现。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:35:18",
+                "line": 49
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "9.21概率.txt",
+          "path": "sources/transcripts/9.21概率.txt",
+          "originalPath": "概率论与数理统计/9.21概率.txt",
+          "kind": "transcript",
+          "sha256": "1cfb042ba393624a04963df1f2fbb5af6730b43aa4024b3197ded0ca68d57954"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-09-21.json"
+    },
+    {
+      "id": "2026-09-24",
+      "date": "2026-09-24",
+      "title": "条件概率、独立性与推理方向",
+      "summary": "把条件概率继续看作测量工具，再连接乘法、独立与全概率。",
+      "conceptIds": [
+        "conditional-probability",
+        "independence",
+        "total-bayes"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:33:06",
+        "segmentCount": 81
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "条件概率仍是概率",
+            "text": "固定条件后验证概率公理，说明旧的概率性质仍可使用。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:07:13",
+                "line": 17
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "乘法公式与摸球",
+            "text": "在不放回摸球中按次序表达条件与事件。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:19:27",
+                "line": 31
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "独立性的定义与边界",
+            "text": "从不改变概率规律引入独立，后区分互斥、两两独立和相互独立。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:39:46",
+                "line": 52
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "全概率与贝叶斯开头",
+            "text": "开始区分由原因求结果及已知结果后反看原因；下次继续展开。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:17:11",
+                "line": 92
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "独立性的假设",
+            "text": "老师把独立性作为简化概率问题的重要理想假设。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:52:42",
+                "line": 60
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "不放回摸球",
+            "text": "先用特殊球数情形说明条件概率，再推广到分类求概率。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:20:11",
+                "line": 32
+              }
+            ]
+          }
+        ],
+        "examTips": [],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "同一个摸球模型的延续",
+            "text": "10月29日边缘与条件构造联合，可与本次乘法和条件的思路对照。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:19:27",
+                "line": 31
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "9.24概率.txt",
+          "path": "sources/transcripts/9.24概率.txt",
+          "originalPath": "概率论与数理统计/9.24概率.txt",
+          "kind": "transcript",
+          "sha256": "b30d2fe28d1a58163401899c790dcdb8348871df8140b055b434ac8eb6ad585b"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-09-24.json"
+    },
+    {
+      "id": "2026-09-28",
+      "date": "2026-09-28",
+      "title": "贝叶斯更新与伯努利模型",
+      "summary": "重用摸球模型串起公式，再以二项、多项模型和连续性收尾第一章。",
+      "conceptIds": [
+        "independence",
+        "total-bayes",
+        "binomial",
+        "continuity"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:33:26",
+        "segmentCount": 77
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "独立假设简化计算",
+            "text": "补充射击、串并联系统的概率计算。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:03:07",
+                "line": 9
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "先验、后验与信息更新",
+            "text": "从结果反看原因，继续讨论摸球和螺栓生产的模型。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:15:12",
+                "line": 25
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "伯努利、二项与多项",
+            "text": "从两个结果推广到多结果独立重复试验。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:35:22",
+                "line": 50
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "回到连续性，结束第一章",
+            "text": "补充连续性习题，并预告下一次引入随机变量。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:18:18",
+                "line": 87
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "用一个模型串起几个公式",
+            "text": "老师建议借同一个摸球模型搞清条件、全概率与贝叶斯的逻辑。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:29:45",
+                "line": 39
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "摸球与贝叶斯",
+            "text": "已知第二次摸到白球，再问第一次摸到白球的概率，改变推理方向。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:19:52",
+                "line": 28
+              }
+            ]
+          }
+        ],
+        "examTips": [],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "从次数模型到随机变量",
+            "text": "伯努利与多结果试验先提供模型，后续随机变量给出统一描述。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:35:22",
+                "line": 50
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "9.28概率.txt",
+          "path": "sources/transcripts/9.28概率.txt",
+          "originalPath": "概率论与数理统计/9.28概率.txt",
+          "kind": "transcript",
+          "sha256": "3d66b5e32c0baa755634d34076c37688d7de978744bf4ac6edb608bc2107bdf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-09-28.json"
+    },
+    {
+      "id": "2026-10-08",
+      "date": "2026-10-08",
+      "title": "随机变量与 CDF：从事件到实数",
+      "summary": "用映射和逆像解释随机变量的必要性；CDF 成为统一入口。",
+      "conceptIds": [
+        "random-variable",
+        "cdf",
+        "total-bayes",
+        "continuity"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:38:01",
+        "segmentCount": 86
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "为什么引入随机变量",
+            "text": "抽象试验结果不便直接使用高数工具，先把结果映为实数。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:05:09",
+                "line": 8
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "定义、逆像和复合关系",
+            "text": "从值域出发找回事件，再由概率测量。严格可测范围的表述仍有疑点。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:17:46",
+                "line": 24
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "常数、CDF 与性质",
+            "text": "验证常数也是随机变量；讨论CDF的性质与概率连续性的联系。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:52:50",
+                "line": 74
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "混合分布例子",
+            "text": "通过硬币决定取常数或均匀取值，说明离散、连续不是穷尽分类。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:28:59",
+                "line": 118
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "分布函数要定义完整",
+            "text": "老师明确提醒分段CDF覆盖全实数，少一个值会扣分。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:19:11",
+                "line": 109
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "硬币混合分布",
+            "text": "正面取常数1，反面在[0,1]均匀取值，再用全概率求CDF。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:29:38",
+                "line": 119
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "CDF不要漏定义域",
+            "text": "分段结果需覆盖所有实数；老师提到漏值会扣分。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:19:11",
+                "line": 109
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "CDF作为后续统一入口",
+            "text": "离散分布律、连续密度和函数变换，后面都能回到CDF与事件表达。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:58:25",
+                "line": 79
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.8概率.txt",
+          "path": "sources/transcripts/10.8概率.txt",
+          "originalPath": "概率论与数理统计/10.8概率.txt",
+          "kind": "transcript",
+          "sha256": "70c39759164a324c1c6e17e00d49d0c77e3a229eb64ff02dc871143db57241dd"
+        },
+        {
+          "id": "slides-2-1",
+          "label": "Chapter2-Section1(1).pdf",
+          "path": "sources/courseware/Chapter2-Section1(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section1(1).pdf",
+          "kind": "courseware",
+          "pageCount": 61,
+          "sha256": "2236a18cf2f32f1378213f6ec190be7e27e912aa39aa15e0d7d236365d6787a5"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-08.json"
+    },
+    {
+      "id": "2026-10-12",
+      "date": "2026-10-12",
+      "title": "离散分布：等待、成功次数与计数",
+      "summary": "从分布律走向几何、负二项与泊松，重视模型所表达的随机量。",
+      "conceptIds": [
+        "cdf",
+        "geometric",
+        "binomial",
+        "poisson",
+        "independence"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:36:43",
+        "segmentCount": 102
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "分布律与CDF",
+            "text": "讨论可数取值、非负与归一化，以及分布律和阶梯CDF的关系。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:08:17",
+                "line": 18
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "几何等待与无记忆性",
+            "text": "以首次成功所需次数解释几何分布和过去不影响未来。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:22:24",
+                "line": 43
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "第r次成功",
+            "text": "用最后一次必成功、前面已有r−1次成功推广到负二项模型。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:03:08",
+                "line": 91
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "泊松与时间尺度",
+            "text": "讲泊松分布、二项近似，再引出单位时间计数与间隔时间。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:10:15",
+                "line": 103
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "先想结果，再计算",
+            "text": "老师要求先形成对概率结果的判断，再用计算相互核验。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:57:53",
+                "line": 84
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "首次与第二次成功",
+            "text": "已知第二次成功在第n次，思考首次成功位置为何等可能。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:51:19",
+                "line": 75
+              }
+            ]
+          }
+        ],
+        "examTips": [],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "离散与连续的等待对象",
+            "text": "几何等待次数与下一次指数等待时间具有课堂可对照的共同背景。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:22:24",
+                "line": 43
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.12概率.txt",
+          "path": "sources/transcripts/10.12概率.txt",
+          "originalPath": "概率论与数理统计/10.12概率.txt",
+          "kind": "transcript",
+          "sha256": "ee188c03757064c3ddd01b6019db4310ed322f4db24a2c1531dac9bc1ff30be3"
+        },
+        {
+          "id": "slides-2-2",
+          "label": "Chapter2-Section2(1).pdf",
+          "path": "sources/courseware/Chapter2-Section2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 46,
+          "sha256": "6aee6abddd5f0738e472bbe26d43fbf6c6355a24840f009bc29b7f36933f8388"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-12.json"
+    },
+    {
+      "id": "2026-10-15",
+      "date": "2026-10-15",
+      "title": "连续密度、指数等待与失效率",
+      "summary": "用小区间理解密度，指数分布成为本次重点。",
+      "conceptIds": [
+        "cdf",
+        "exponential",
+        "geometric"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:33:24",
+        "segmentCount": 92
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "从CDF积分表示定义连续型",
+            "text": "讨论密度、单点概率为零及CDF与求导的关系。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:01:56",
+                "line": 9
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "小区间帮助理解密度",
+            "text": "把密度乘以很小的区间宽度，与该区间概率联系起来。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:22:34",
+                "line": 37
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "指数与几何的对应",
+            "text": "从离散等待次数转向连续等待时间和无记忆性。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:43:03",
+                "line": 60
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "常数失效率",
+            "text": "用已存活条件下的下一小段时间失效概率解释失效率。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:17:08",
+                "line": 107
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "答题写出概率依据",
+            "text": "老师强调概率公式和范围，微积分长计算不作为课堂要求的主体。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:27:49",
+                "line": 43
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "归一化例题",
+            "text": "借含未知常数的密度题讨论求常数、区间概率与完整CDF。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:25:59",
+                "line": 39
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "过程分的课堂提示",
+            "text": "老师用例题强调定义、公式与完整分段；并非已经核实的官方评分表。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:33:37",
+                "line": 48
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "从等待时间走到计数联系",
+            "text": "指数等待时间将在10.19与泊松计数发生明确联系。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:43:03",
+                "line": 60
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.15概率.txt",
+          "path": "sources/transcripts/10.15概率.txt",
+          "originalPath": "概率论与数理统计/10.15概率.txt",
+          "kind": "transcript",
+          "sha256": "80b3b3af6cc3d2e615b496af6cbe9abcaa4602f1c60f11204dde245d804c0e50"
+        },
+        {
+          "id": "slides-2-3",
+          "label": "Chapter2-Section3(1).pdf",
+          "path": "sources/courseware/Chapter2-Section3(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section3(1).pdf",
+          "kind": "courseware",
+          "pageCount": 66,
+          "sha256": "ca2025925068e53972ca56ca16075b66682f9d780088056acd59229d32f821e4"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-15.json"
+    },
+    {
+      "id": "2026-10-19",
+      "date": "2026-10-19",
+      "title": "泊松—指数联系与正态标准化",
+      "summary": "计数与间隔在课堂被连接起来，随后进入正态、查表与分位点。",
+      "conceptIds": [
+        "poisson",
+        "exponential",
+        "normal",
+        "transform"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:34:23",
+        "segmentCount": 78
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "泊松计数与指数间隔",
+            "text": "用一段时间无到达与等待超过该时间的事件对应建立联系；完整过程假设仍需核实。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:07:27",
+                "line": 19
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "正态的形状与参数",
+            "text": "引入密度、中心及松散程度；后进入标准化。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:25:45",
+                "line": 40
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "标准化、查表与分位点",
+            "text": "把一般正态问题转成标准正态，讨论对称性、三σ及上分位点。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:51:13",
+                "line": 68
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "变量函数的引子",
+            "text": "伽马只作概览，末尾开始研究Y=g(X)，尚未展开全部方法。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:29:02",
+                "line": 106
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "正态形式与符号需记忆",
+            "text": "老师说一般考试不会把正态密度形式作为已知条件直接给出。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:26:32",
+                "line": 41
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "一般正态标准化",
+            "text": "课件例题X服从N(2,9)，通过减2除3转为标准正态再查表。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:04:28",
+                "line": 77
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "正态密度形式",
+            "text": "老师提示应记住符号和形式，一般考试不会直接提供。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:26:32",
+                "line": 41
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "标准化也是变量变换",
+            "text": "后续线性变换公式会把本次标准化放到更一般的形式中。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:40:44",
+                "line": 61
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.19概率.txt",
+          "path": "sources/transcripts/10.19概率.txt",
+          "originalPath": "概率论与数理统计/10.19概率.txt",
+          "kind": "transcript",
+          "sha256": "9259c05652493e485a47d850bc7f17b40e30a0bfa7d2f1a4bdfb2df25ef62341"
+        },
+        {
+          "id": "slides-2-3",
+          "label": "Chapter2-Section3(1).pdf",
+          "path": "sources/courseware/Chapter2-Section3(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section3(1).pdf",
+          "kind": "courseware",
+          "pageCount": 66,
+          "sha256": "ca2025925068e53972ca56ca16075b66682f9d780088056acd59229d32f821e4"
+        },
+        {
+          "id": "slides-2-4",
+          "label": "Chapter2-Section4(2).pdf",
+          "path": "sources/courseware/Chapter2-Section4(2).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section4(2).pdf",
+          "kind": "courseware",
+          "pageCount": 74,
+          "sha256": "f9d263debd7f83222045232e810ff674a222470c6ed0765f34c8c6864873482e"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-19.json"
+    },
+    {
+      "id": "2026-10-22",
+      "date": "2026-10-22",
+      "title": "变量变换：从 CDF 到多分支",
+      "summary": "反复在平方和指数变换中比较方法与适用范围。",
+      "conceptIds": [
+        "transform",
+        "cdf",
+        "normal"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:47:46",
+        "segmentCount": 90
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "复合变量与离散变换",
+            "text": "先确定新变量取值，多个原值映到同一值时合并概率。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:12:24",
+                "line": 19
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "CDF方法与平方例子",
+            "text": "把新变量事件转回X的事件；困难在区域和积分限。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:28:13",
+                "line": 41
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "严格单调公式",
+            "text": "找反函数及其导数，再用于对数正态和线性变换。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:57:21",
+                "line": 68
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "分段单调与下次预告",
+            "text": "平方分成两个分支，末尾口头试举sin X，下一次再提。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:18:03",
+                "line": 93
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "写清事件与步骤",
+            "text": "老师强调概率步骤、取值范围与必要文字说明，计算可以简化。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:34:52",
+                "line": 47
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "均匀变量的平方",
+            "text": "X在[-1,1]均匀取值时，平方将两侧原像并入同一个y，比较CDF与分支求法。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:28:13",
+                "line": 41
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "强调步骤",
+            "text": "老师以题目中的关键概率步骤说明得分，要求按规范写作业。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:36:38",
+                "line": 48
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "分段单调方法尚有后续",
+            "text": "10.26继续补完sin X，并强调在原变量实际取值区间上看单调性。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:35:41",
+                "line": 107
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.22概率.txt",
+          "path": "sources/transcripts/10.22概率.txt",
+          "originalPath": "概率论与数理统计/10.22概率.txt",
+          "kind": "transcript",
+          "sha256": "4932e699f48b11e24be68fc24048456c56172d60d417edaf316074221436e823"
+        },
+        {
+          "id": "slides-2-4",
+          "label": "Chapter2-Section4(2).pdf",
+          "path": "sources/courseware/Chapter2-Section4(2).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section4(2).pdf",
+          "kind": "courseware",
+          "pageCount": 74,
+          "sha256": "f9d263debd7f83222045232e810ff674a222470c6ed0765f34c8c6864873482e"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-22.json"
+    },
+    {
+      "id": "2026-10-26",
+      "date": "2026-10-26",
+      "title": "变换收尾，进入二维联合分布",
+      "summary": "补完sin X与F(X)变换，之后从映射进入二维联合CDF及分布律。",
+      "conceptIds": [
+        "transform",
+        "cdf",
+        "joint",
+        "normal"
+      ],
+      "coverage": "survey",
+      "recording": {
+        "missingOpeningSeconds": null,
+        "missingOpeningApprox": false,
+        "lastTimestamp": "01:35:44",
+        "segmentCount": 79
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "取值区间内的单调性",
+            "text": "同一个平方函数在不同X取值区间上，公式适用性不同。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:01:33",
+                "line": 11
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "sin X的两个反分支",
+            "text": "课件题设为密度2x/π²，而不是上次口头试举的均匀分布。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:08:21",
+                "line": 24
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "CDF均匀化与模拟背景",
+            "text": "讲F(X)变换，最后结束第二章；证明的反函数条件有待核实。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:30:47",
+                "line": 52
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "二维联合CDF和分布律",
+            "text": "定义二维映射、矩形概率，举硬币和正方形，再转联合分布律。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:50:06",
+                "line": 69
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "emphasis-1",
+            "title": "别漏取值范围之外",
+            "text": "老师提醒取值范围外的分段是容易遗漏、也容易得分的部分。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:12:43",
+                "line": 29
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "examples": [
+          {
+            "id": "example-1",
+            "title": "sin X",
+            "text": "与英2.4第55页题设相对应：密度2x/π²，0<x<π；分为两个单调区间。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:08:21",
+                "line": 24
+              }
+            ]
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-1",
+            "title": "本部往年例题线索",
+            "text": "老师称相关变换例题在本部往年期中常用；不能据此说当前班必考。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:40:27",
+                "line": 62
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [],
+        "connections": [
+          {
+            "id": "connection-1",
+            "title": "新录音修正了先前预测",
+            "text": "原勘察推测可能先补联合密度；现有10.29录音已进入边缘分布，漏录部分不能反推。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:50:06",
+                "line": 69
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.26概率.txt",
+          "path": "sources/transcripts/10.26概率.txt",
+          "originalPath": "概率论与数理统计/10.26概率.txt",
+          "kind": "transcript",
+          "sha256": "0a6d1eac8ef777082505f98f66fe1765422c2328c280f53aa8faca4521d85749"
+        },
+        {
+          "id": "slides-2-4",
+          "label": "Chapter2-Section4(2).pdf",
+          "path": "sources/courseware/Chapter2-Section4(2).pdf",
+          "originalPath": "概率论与数理统计/Chapter2-Section4(2).pdf",
+          "kind": "courseware",
+          "pageCount": 74,
+          "sha256": "f9d263debd7f83222045232e810ff674a222470c6ed0765f34c8c6864873482e"
+        },
+        {
+          "id": "slides-3-1",
+          "label": "Chapter3-Silde1(1).pdf",
+          "path": "sources/courseware/Chapter3-Silde1(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter3-Silde1(1).pdf",
+          "kind": "courseware",
+          "pageCount": 38,
+          "sha256": "6dd861b85ba2fdaf411e8580d46f1620319b86c2b03d5779654c019b51528003"
+        },
+        {
+          "id": "notes-2",
+          "label": "Chapter-2(1).pdf",
+          "path": "sources/courseware/Chapter-2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter-2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 63,
+          "sha256": "c4719ac1bb5ae980bc2e40f520e3cc9ad819bf1b35cae93c756c68adb9ce1bf3"
+        },
+        {
+          "id": "notes-3",
+          "label": "Chapter3(1).pdf",
+          "path": "sources/courseware/Chapter3(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter3(1).pdf",
+          "kind": "courseware",
+          "pageCount": 48,
+          "sha256": "8d52b2ea6e0e15e9b5b3ba3fe8c5139e5e47a0fe6e9bd8b71514220ca49ae24e"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-26.json"
+    },
+    {
+      "id": "2026-10-29",
+      "date": "2026-10-29",
+      "title": "联合、边缘与条件：信息与范围",
+      "summary": "从联合所保留的信息出发，以投影和固定条件后的截线理解边缘与条件密度。",
+      "conceptIds": [
+        "joint",
+        "marginal",
+        "conditional-distribution",
+        "conditional-probability",
+        "normal"
+      ],
+      "coverage": "detailed",
+      "recording": {
+        "missingOpeningSeconds": 300,
+        "missingOpeningApprox": true,
+        "lastTimestamp": "01:26:47",
+        "note": "开头约5分钟未录到（用户自述）；原始时间戳从现存录音起点计时，不整体加5分钟。",
+        "segmentCount": 75
+      },
+      "sections": {
+        "outline": [
+          {
+            "id": "outline-1",
+            "title": "联合与边缘的信息关系",
+            "text": "录音从承接中的话开始，随后进入边缘CDF；不能补造漏录的引入。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:00:00",
+                "line": 7
+              }
+            ]
+          },
+          {
+            "id": "outline-2",
+            "title": "离散边缘：行列求和",
+            "text": "不再区分另一变量取何值，把相应联合概率相加。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:03:29",
+                "line": 13
+              }
+            ]
+          },
+          {
+            "id": "outline-3",
+            "title": "连续边缘：投影与积分限",
+            "text": "先确定投影范围，再固定坐标沿另一方向找到非零区域的上下边界。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:10:17",
+                "line": 22
+              }
+            ]
+          },
+          {
+            "id": "outline-4",
+            "title": "条件分布：先给定再研究",
+            "text": "从离散条件概率进入连续条件密度，突出分母条件及固定变量的意义。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:35:19",
+                "line": 49
+              }
+            ]
+          },
+          {
+            "id": "outline-5",
+            "title": "反向条件及课堂纠错",
+            "text": "从一个边缘和一个条件重建联合，再反向求条件；老师纠正了画错的区域。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:08:30",
+                "line": 77
+              }
+            ]
+          },
+          {
+            "id": "outline-6",
+            "title": "二维正态的截面直观",
+            "text": "用切平面和归一化展示条件分布仍为正态，只展示结果，没有完整证明。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:24:50",
+                "line": 97
+              }
+            ]
+          }
+        ],
+        "explanations": [
+          {
+            "id": "information-quote",
+            "title": "联合保留更多信息",
+            "text": "因为你联合的信息多，边缘信息少。",
+            "sourceType": "teacher_quote",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:08:49",
+                "line": 17
+              }
+            ],
+            "emphasis": true
+          },
+          {
+            "id": "marginal-cdf",
+            "title": "让另一变量取遍可能值",
+            "text": "求X的边缘CDF时，让联合CDF中的y趋于正无穷；两个边缘通常不能唯一重建联合。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:00:37",
+                "line": 8
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 3
+              }
+            ],
+            "formula": "F_X(x)=\\lim_{y\\to+\\infty}F_{X,Y}(x,y)"
+          },
+          {
+            "id": "discrete-marginal",
+            "title": "离散边缘分布律",
+            "text": "固定X的某个值，不再区分Y的取值；用互不相交的事件求和，得到表格边缘的行或列和。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:03:29",
+                "line": 13
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 4
+              }
+            ],
+            "formula": "p_{i\\cdot}=\\sum_jp_{ij},\\qquad p_{\\cdot j}=\\sum_ip_{ij}"
+          },
+          {
+            "id": "projection",
+            "title": "投影确定范围，截线确定积分限",
+            "text": "老师先把非零区域投影到所求变量的坐标轴；范围外密度为0。范围内固定该坐标，再沿另一个方向找积分上下限。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:18:15",
+                "line": 36
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 7
+              }
+            ],
+            "formula": "f_X(x)=\\int_{-\\infty}^{+\\infty}f_{X,Y}(x,y)\\,dy",
+            "emphasis": true
+          },
+          {
+            "id": "conditional-density",
+            "title": "条件密度及分母条件",
+            "text": "在f_Y(y)>0的条件值处，用联合密度除以Y的边缘密度。老师主要讲方法，对证明只作简述。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:44:40",
+                "line": 58
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 16
+              }
+            ],
+            "formula": "f_{X\\mid Y}(x\\mid y)=\\frac{f_{X,Y}(x,y)}{f_Y(y)},\\quad f_Y(y)>0"
+          },
+          {
+            "id": "fixed-condition",
+            "title": "固定条件后的范围",
+            "text": "给定Y=y后，研究X在该水平截线上的取值；不能把整片区域的变化与固定条件混在一起。范围外仍需写0。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:55:34",
+                "line": 68
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 21
+              }
+            ],
+            "emphasis": true
+          },
+          {
+            "id": "rebuild-joint",
+            "title": "边缘与条件补回联系",
+            "text": "仅有两个边缘通常不够；有一个边缘，再有该条件下另一变量的分布，便可按乘法关系构造联合。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:47:02",
+                "line": 61
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 24
+              }
+            ],
+            "formula": "f_{X,Y}(x,y)=f_Y(y)f_{X\\mid Y}(x\\mid y)"
+          },
+          {
+            "id": "normal-section",
+            "title": "二维正态：截面还需归一化",
+            "text": "老师用草帽形密度曲面与平行于XOZ的切平面作直观介绍；截线本身的面积未必为1，需归一化，结果仍是正态。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:24:50",
+                "line": 97
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 28
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 31
+              }
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "id": "curved-marginals",
+            "title": "曲边区域：同一密度求两个边缘",
+            "text": "课件题设为f(x,y)=4x，0≤x≤1且0≤y≤x²。求X边缘时积分限为0到x²；求Y边缘时X从√y到1。公式和题设经课件核对，不能照抄破损转录。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:23:28",
+                "line": 40
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 10
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 12
+              }
+            ],
+            "formula": "f_X(x)=4x^3\\ (0<x<1),\\qquad f_Y(y)=2(1-y)\\ (0<y<1)"
+          },
+          {
+            "id": "disk",
+            "title": "单位圆上的投影例子",
+            "text": "老师另外举单位圆均匀分布，以圆的上下边界寻找边缘积分限。转录一度把X范围记为0到1，前后又出现−1到1及正负平方根。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:29:12",
+                "line": 46
+              }
+            ],
+            "caution": "缺原始板书；不按不一致的转录生成确定的逐步题解。"
+          },
+          {
+            "id": "curved-conditional",
+            "title": "固定Y后的曲边条件密度",
+            "text": "重用4x曲边题。固定0<y<1后，X的非零范围为√y到1；除以边缘2(1−y)，得到2x/(1−y)。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:57:12",
+                "line": 69
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 21
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 22
+              }
+            ],
+            "formula": "f_{X\\mid Y}(x\\mid y)=\\frac{2x}{1-y},\\quad \\sqrt y<x<1,\\ 0<y<1",
+            "caution": "课件第22页把y=1包含在范围中，但此处分母为0；网页使用分母为正的内部条件范围。端点版本需另行规定。"
+          },
+          {
+            "id": "reverse-conditional",
+            "title": "反向条件：先联合，再边缘，再除法",
+            "text": "课件给Y边缘3y²及条件密度2x/y²（0<x<y<1），重建联合6x；求X边缘后再求Y给定X的条件。老师先画错方向，01:18:31承认图错，01:19:23改为从x到1积分。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:08:30",
+                "line": 77
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:18:31",
+                "line": 88
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:19:23",
+                "line": 90
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 23
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 25
+              },
+              {
+                "sourceId": "slides-3-2",
+                "page": 26
+              }
+            ],
+            "formula": "f_X(x)=\\int_x^1 6x\\,dy=6x(1-x),\\qquad f_{Y\\mid X}(y\\mid x)=\\frac{1}{1-x},\\ x<y<1,\\ 0<x<1",
+            "caution": "纠正前的0到x积分及6x²不是最终答案。课件第26页公式在x=1也不能直接使用。"
+          }
+        ],
+        "examTips": [
+          {
+            "id": "exam-format",
+            "title": "条件固定与卷面写法",
+            "text": "老师反复强调先交代条件值与分母要求，再写剩余变量的函数及范围；把固定截线写成整片区域的变化，是他重点提示的失分问题。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:51:25",
+                "line": 65
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:59:07",
+                "line": 70
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:23:41",
+                "line": 95
+              }
+            ],
+            "emphasis": true,
+            "caution": "关于给0分的说法记为老师的课堂要求，未核验官方评分细则。含x、y的记号也可能表示一族条件密度，不能扩写为这种记法一律错误。"
+          },
+          {
+            "id": "exam-tendency",
+            "title": "条件密度题的命题倾向",
+            "text": "老师讨论这类题常见，并说“如果我们期末考试，我们也会”。这是课堂命题倾向提示，不是正式考题或已经确定的考试范围。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:45:53",
+                "line": 60
+              }
+            ],
+            "emphasis": true
+          },
+          {
+            "id": "exam-endpoints",
+            "title": "端点与分母也要检查",
+            "text": "老师通过投影区间端点讨论条件密度定义的分母要求，提醒不要漏掉必须处理的点。",
+            "sourceType": "transcript_summary",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:03:34",
+                "line": 73
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:05:47",
+                "line": 75
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "01:07:06",
+                "line": 76
+              }
+            ],
+            "emphasis": true
+          }
+        ],
+        "personalNotes": [
+          {
+            "id": "personal-1029",
+            "title": "发现缺口后，主动追索框架",
+            "text": "我迟到了，开头约5分钟没录到；这个缺口反而推动我努力补上一开始的框架，后面有认真听。",
+            "sourceType": "personal_record",
+            "sources": [
+              {
+                "sourceId": "personal"
+              }
+            ]
+          }
+        ],
+        "connections": [
+          {
+            "id": "connection-multiplication",
+            "title": "第一章乘法思想回到联合密度",
+            "text": "这是跨课整理分析：9.24的条件概率与乘法思路，在本次“边缘乘条件构造联合”中有可辨认的延续；不把两个边缘误当成已包含变量联系。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:47:02",
+                "line": 61
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          },
+          {
+            "id": "connection-region",
+            "title": "从逆像区域到投影、截线",
+            "text": "对照10.22、10.26与本次课堂，可以看到老师把范围分析继续具体化为投影和固定条件后的截线。这是材料之间的分析连接。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:33:49",
+                "line": 48
+              },
+              {
+                "sourceId": "transcript",
+                "timestamp": "00:55:34",
+                "line": 68
+              },
+              {
+                "sourceId": "survey"
+              }
+            ]
+          },
+          {
+            "id": "connection-next",
+            "title": "下一次可能进入独立性",
+            "text": "本次推进到英3.2末尾，英3.3从条件分布引入独立性；因此可能接独立性，也可能先补题。尚无下一次课堂记录。",
+            "sourceType": "ai_analysis",
+            "sources": [
+              {
+                "sourceId": "survey"
+              }
+            ]
+          }
+        ]
+      },
+      "sources": [
+        {
+          "id": "transcript",
+          "label": "10.29概率.txt",
+          "path": "sources/transcripts/10.29概率.txt",
+          "originalPath": "概率论与数理统计/10.29概率.txt",
+          "kind": "transcript",
+          "sha256": "d8626957beb3647f2dbae776f314d9308ae6e350d5b78c414d4a5100abf9cebe"
+        },
+        {
+          "id": "slides-3-2",
+          "label": "Chapter3-Slide2(1).pdf",
+          "path": "sources/courseware/Chapter3-Slide2(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter3-Slide2(1).pdf",
+          "kind": "courseware",
+          "pageCount": 32,
+          "sha256": "36da773d1f7aa9d0c75c29c8a87080457d6bb48c432c2703761f12347e7d26cc"
+        },
+        {
+          "id": "notes-3",
+          "label": "Chapter3(1).pdf",
+          "path": "sources/courseware/Chapter3(1).pdf",
+          "originalPath": "概率论与数理统计/Chapter3(1).pdf",
+          "kind": "courseware",
+          "pageCount": 48,
+          "sha256": "8d52b2ea6e0e15e9b5b3ba3fe8c5139e5e47a0fe6e9bd8b71514220ca49ae24e"
+        },
+        {
+          "id": "survey",
+          "label": "Codex课程勘察报告（含10.29增补）",
+          "path": "sources/analysis/课程勘察报告.md",
+          "originalPath": "D:\\HuaweiMoveData\\Users\\郑皓雯\\Documents\\ChatGPT\\alt+G\\课程勘察\\概率论十节课_课程勘察报告.md",
+          "kind": "analysis",
+          "sha256": "41b66d4c39b7cc7f6741bec3a5a04aca4e9724bbb6ccfde273f02672157b2442"
+        },
+        {
+          "id": "personal",
+          "label": "本次聊天中的学习体验自述",
+          "path": null,
+          "originalPath": null,
+          "kind": "personal"
+        }
+      ],
+      "transcriptPath": "data/transcripts/2026-10-29.json"
+    }
+  ]
+}

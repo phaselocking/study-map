@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="沿着课堂的逻辑，阅读联合分布、边缘分布与条件分布。">
+  <title>10.29 · 概率论随课阅读</title>
+  <!-- {{LICENSE}} -->
+  {{MATH_CSS}}
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f8f6ef;
+      --ink: #303731;
+      --muted: #737a70;
+      --green: #4c695a;
+      --line: #d9ded1;
+      --wash: #edf0e6;
+      --note: #f0ece1;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      font-size: 18px;
+      line-height: 1.95;
+      overflow-wrap: break-word;
+      -webkit-text-size-adjust: 100%;
+    }
+    .page-shell { width: min(100% - 64px, 760px); margin-inline: auto; }
+    .site-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 25px 19px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+    .site-header a { color: var(--green); text-decoration: none; }
+    .site-header time { color: var(--muted); white-space: nowrap; }
+    main { padding-top: 30px; }
+    h1, h2, h3 { font-weight: 500; line-height: 1.5; }
+    h1 {
+      margin: 5px 0 14px;
+      font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+      font-size: 30px;
+      letter-spacing: .025em;
+    }
+    h2 { margin: 0 0 18px; font-size: 23px; }
+    h3 { margin: 25px 0 10px; font-size: 18px; }
+    p { margin: 0 0 17px; }
+    strong { font-weight: 600; }
+    a { color: var(--green); text-underline-offset: .24em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 5px; }
+    .eyebrow, .kicker, .section-number {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      letter-spacing: .08em;
+    }
+    .lead { color: #505b51; font-size: 18px; }
+    .lesson-intro { margin-bottom: 24px; }
+    .reading-path {
+      margin: 25px 0 38px;
+      padding: 17px 22px 17px 39px;
+      background: var(--wash);
+      border-radius: 2px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .reading-path li { padding: 5px 0 5px 5px; }
+    .reading-path li::marker { color: var(--green); font-size: 12px; }
+    .reading-path a { text-decoration: none; }
+    .reading-path a:hover { text-decoration: underline; }
+    .reading-path small { display: block; color: var(--muted); font-size: 13px; }
+    section.reading-section, main > section:not(.lesson-intro) {
+      margin-top: 39px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 18px;
+    }
+    .section-number { display: block; margin-bottom: 7px; }
+    .bridge {
+      margin: 23px 0;
+      padding-left: 17px;
+      border-left: 2px solid #a8b8a3;
+      color: #50604f;
+      font-size: 16px;
+    }
+    .formula, .math-block {
+      margin: 21px 0;
+      padding: 11px 2px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      font-size: 1em;
+    }
+    .katex { font-size: 1.05em; }
+    .katex-display { margin: .5em 0; }
+    .katex-display > .katex { white-space: nowrap; }
+    ul, ol { padding-left: 1.45em; margin-block: 12px 21px; }
+    li { padding-left: 3px; margin-bottom: 7px; }
+    .example {
+      margin: 24px 0;
+      padding: 2px 0 2px 18px;
+      border-left: 2px solid var(--line);
+    }
+    .example h3 { margin-top: 0; }
+    .aside-note, .note {
+      margin: 18px 0;
+      padding: 13px 16px;
+      background: var(--note);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+    .source-note, .source-ref, .caption, figcaption {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .source-note { margin-top: 20px; }
+    .source-note a, .source-ref a { color: inherit; }
+    .source-label {
+      display: inline;
+      color: var(--green);
+      font-size: 12px;
+      margin-right: 8px;
+    }
+    figure { margin: 25px 0; }
+    figure svg, figure img, .figure svg, .figure img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+    figcaption { margin-top: 10px; text-align: center; }
+    details {
+      margin: 23px 0;
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.95;
+    }
+    details > summary {
+      color: var(--green);
+      cursor: pointer;
+      padding: 5px 1px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    details[open] > summary { margin-bottom: 16px; }
+    details p:last-child { margin-bottom: 7px; }
+    details details { margin-inline: 0; }
+    blockquote { margin: 20px 0; padding-left: 18px; border-left: 2px solid var(--line); }
+    code { font-size: .9em; overflow-wrap: anywhere; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 20px 0; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { font-weight: 500; }
+    .site-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 20px;
+      margin-top: 50px;
+      padding-block: 20px 35px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media (max-width: 600px) {
+      body { font-size: 17px; line-height: 1.95; }
+      .page-shell { width: calc(100% - 40px); }
+      .site-header { padding-block: 19px 15px; font-size: 12px; }
+      main { padding-top: 23px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 21px; }
+      h3 { font-size: 17px; }
+      .lead { font-size: 17px; }
+      .reading-path { padding: 14px 15px 14px 31px; font-size: 15px; }
+      .bridge, details { font-size: 16px; }
+      .example { padding-left: 13px; }
+      .formula, .math-block { font-size: 15px; }
+      .aside-note, .note { padding: 12px 13px; }
+      section.reading-section, main > section:not(.lesson-intro) { margin-top: 32px; padding-top: 25px; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 4px; }
+    }
+    @media print {
+      body { background: white; font-size: 12pt; }
+      .page-shell { width: 100%; max-width: none; }
+      .site-header { padding-top: 0; }
+      details { break-inside: avoid; }
+      .site-footer a { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <a href="#top">概率论 · 随课阅读</a>
+      <time datetime="2026-10-29">10.29</time>
+    </header>
+    <main id="main">
+      {{CONTENT}}
+    </main>
+    <footer class="site-footer">
+      <span>沿着课堂，把问题读清楚。</span>
+      <a href="#top">回到开头 ↑</a>
+    </footer>
+  </div>
+  {{MATH_JS}}
+</body>
+</html>

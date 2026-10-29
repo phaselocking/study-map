@@ -1,0 +1,28 @@
+# Optional example only. This file is inactive inside docs/.
+# After reviewing publication scope, copy to .github/workflows/probability-pages.yml
+# in the study-map repository, commit/push yourself, then run manually in Actions.
+name: Publish Probability Archive
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: probability-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: probability-atlas
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

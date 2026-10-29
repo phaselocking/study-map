@@ -1,0 +1,127 @@
+<section class="lesson-intro" aria-labelledby="lesson-title">
+  <p class="eyebrow">第三章 · 10 月 29 日</p>
+  <h1 id="lesson-title">从联合，读到条件</h1>
+  <p class="lead">这节课沿着同一件事往前走：先看两个变量一起怎样变化，再只看一个，最后看“知道另一个以后”会怎样。</p>
+</section>
+
+<nav aria-label="本课主线">
+  <ol class="reading-path">
+    <li><a href="#joint">联合：保留两者一起取值的信息</a><small>↓ 只想看其中一个变量</small></li>
+    <li><a href="#marginal">边缘：把另一个变量的可能值合并</a><small>↓ 现在给定另一个变量的值</small></li>
+    <li><a href="#conditional">条件：固定以后，重新看剩下的分布</a><small>↓ 如果把“给定谁”换个方向</small></li>
+    <li><a href="#reverse">换方向：联合 → 新边缘 → 新条件</a></li>
+  </ol>
+</nav>
+
+<section class="reading-section" id="joint" aria-labelledby="joint-title">
+  <span class="section-number">01 · 先看整体</span>
+  <h2 id="joint-title">联合比两个边缘，多保留了什么？</h2>
+  <p>边缘告诉你 <math-tex>X</math-tex> 自己怎样分布、<math-tex>Y</math-tex> 自己怎样分布；联合还保留了<strong>哪些取值会一起出现</strong>的信息。</p>
+  <p>因此，知道联合就能求边缘；仅知道两个边缘，通常还不能确定联合。</p>
+  <p class="source-note">课堂 00:08:49；中文讲义第 13 页，注 3.8。</p>
+  <p class="bridge">先从联合中取出单个变量的信息，这就进入了边缘分布。</p>
+</section>
+
+<section class="reading-section" id="marginal" aria-labelledby="marginal-title">
+  <span class="section-number">02 · 只看一个变量</span>
+  <h2 id="marginal-title">“不管另一个变量”怎样计算？</h2>
+  <p>求 <math-tex>X</math-tex> 的边缘时，仍研究它的每个取值，只把 <math-tex>Y</math-tex> 的所有可能合并起来。离散时做求和，连续时做积分。</p>
+  <math-tex display="block">p_{i\cdot}=\sum_jp_{ij}</math-tex>
+  <math-tex display="block">f_X(x)=\int_{-\infty}^{+\infty}f_{X,Y}(x,y)\,dy</math-tex>
+  <p>真正算题时，积分限来自<strong>联合密度不为零的区域</strong>。先看坐标轴上的投影，再固定所求变量，沿另一个方向找边界。</p>
+
+  <details id="curved-example">
+    <summary>跟一下课堂的曲边例题</summary>
+    <p>课件与讲义使用同一道题：联合密度为 <math-tex>4x</math-tex>，非零区域是 <math-tex>0&lt;x&lt;1,\ 0&lt;y&lt;x^2</math-tex>。下面只写内部区间，密度在边界单点的取值不影响分布。</p>
+    <figure><img src="{{CURVED_IMAGE}}" alt="中文讲义第16页：曲边例题题设与区域图。原题先给cx，并求出c等于4。" width="892" height="545"><figcaption>中文讲义第 16 页，例 3.8 原题；先由总积分为 1 得到 c=4。</figcaption></figure>
+    <p>求 <math-tex>f_X</math-tex>：固定 <math-tex>x</math-tex>，竖着看，<math-tex>y</math-tex> 从 0 到 <math-tex>x^2</math-tex>。</p>
+    <math-tex display="block">f_X(x)=\int_0^{x^2}4x\,dy=4x^3</math-tex>
+    <p>求 <math-tex>f_Y</math-tex>：固定 <math-tex>y</math-tex>，横着看，由 <math-tex>y&lt;x^2</math-tex> 且 <math-tex>x&gt;0</math-tex> 得到 <math-tex>x&gt;\sqrt y</math-tex>，一直到 1。</p>
+    <math-tex display="block">f_Y(y)=\int_{\sqrt y}^{1}4x\,dx=2(1-y)</math-tex>
+    <p>前式在 <math-tex>0&lt;x&lt;1</math-tex> 使用，后式在 <math-tex>0&lt;y&lt;1</math-tex> 使用；各自范围外密度为 0。</p>
+    <p class="source-note">课堂 00:23:28；PPT 第 10–12 页；中文讲义第 16–17 页。这里的解释按这些资料整理。</p>
+  </details>
+
+  <details>
+    <summary>离散的“行和、列和”，以及边缘 CDF</summary>
+    <p>若表格每行对应一个 <math-tex>X</math-tex> 值，求这一行所有联合概率之和，就得到该 <math-tex>X</math-tex> 值的边缘概率。列对应 <math-tex>Y</math-tex> 时同理。先看清表头，再决定按哪一方向加。</p>
+    <p>从联合 CDF 求 <math-tex>X</math-tex> 的边缘 CDF，也是在撤掉对 <math-tex>Y</math-tex> 的限制：</p>
+    <math-tex display="block">F_X(x)=\lim_{y\to+\infty}F_{X,Y}(x,y)</math-tex>
+    <p class="source-note">课堂 00:00:37、00:03:29；中文讲义第 13–14 页。</p>
+  </details>
+  <p class="source-note">投影与积分限：课堂 00:18:15；PPT 第 7 页。承接到条件分布：00:33:49–00:35:19。</p>
+  <p class="bridge">边缘看单个变量的总体分布。接下来改变问题：已经知道 Y 的值，X 会怎样？</p>
+</section>
+
+<section class="reading-section" id="conditional" aria-labelledby="conditional-title">
+  <span class="section-number">03 · 已经知道一个值</span>
+  <h2 id="conditional-title">固定以后，为什么还要除一次？</h2>
+  <p>先给定 <math-tex>Y=y_0</math-tex>，并要求 <math-tex>f_Y(y_0)&gt;0</math-tex>。此时 <math-tex>y_0</math-tex> 已经固定，剩下研究的是 <math-tex>X</math-tex>。</p>
+  <math-tex display="block">f_{X\mid Y}(x\mid y_0)=\frac{f_{X,Y}(x,y_0)}{f_Y(y_0)}</math-tex>
+  <p>分子取联合密度的一条截面；分母把这条截面的总积分调成 1。<strong>条件密度就是固定之后，再归一化。</strong></p>
+
+  <details>
+    <summary>还是那道曲边题，固定 Y 后会怎样？</summary>
+    <p>给定任意 <math-tex>0&lt;y_0&lt;1</math-tex>，沿水平线 <math-tex>y=y_0</math-tex> 看原区域，<math-tex>X</math-tex> 只能落在 <math-tex>\sqrt{y_0}&lt;x&lt;1</math-tex>。</p>
+    <math-tex display="block">f_{X\mid Y}(x\mid y_0)=\begin{cases}\dfrac{2x}{1-y_0},&amp;\sqrt{y_0}&lt;x&lt;1,\\0,&amp;\text{其他}.\end{cases}</math-tex>
+    <p>这里 <math-tex>y_0</math-tex> 是给定值。对剩下的变量 <math-tex>x</math-tex> 积分，结果是 1：</p>
+    <math-tex display="block">\int_{\sqrt{y_0}}^1\frac{2x}{1-y_0}\,dx=1</math-tex>
+    <p class="source-note">课堂 00:55:34、00:57:12；PPT 第 21–22 页；中文讲义第 20–21 页。</p>
+    <p class="note"><span class="source-label">整理校核</span>讲义第 20 页和 PPT 第 22 页把条件值 y=1 也写进了范围，但此时分母为 0，不能直接套这个比值公式。本页选取内部条件值，先把方法读清楚。</p>
+  </details>
+
+  <details>
+    <summary>看中文定义，以及容易混淆的写法</summary>
+    <figure><img src="{{DEFINITION_IMAGE}}" alt="中文讲义第18页定义3.9，条件密度等于联合密度除以对应边缘密度，前提为该边缘密度大于0。" width="892" height="274"><figcaption>中文讲义第 18 页，定义 3.9 原文。</figcaption></figure>
+    <p>写 <math-tex>f_{X\mid Y}(x\mid y)</math-tex> 可以表示随条件值变化的一族密度；具体给定 <math-tex>y=y_0</math-tex> 后，它是关于 <math-tex>x</math-tex> 的函数。关键是说清谁固定、谁变化。</p>
+    <p class="note"><span class="source-label">课堂提醒</span>老师反复强调条件值、范围与范围外的 0。课堂 00:51:25、00:59:07、01:23:41。这里保留写法要求，不把它扩大成“式子里出现 x 和 y 就一定错”。</p>
+    <p class="source-note">参数与固定值的说明另核对了 <a href="https://online.stat.psu.edu/stat414/Lesson20" target="_blank" rel="noopener noreferrer">Penn State STAT 414 的条件密度定义</a>；外部资料是理解补充。</p>
+  </details>
+
+  <details>
+    <summary>P(Y=y₀)=0，为什么还能谈“给定 Y=y₀”？</summary>
+    <p>这里做的是密度的比值，不能直接拿两个点事件概率相除。在适当的连续性条件下，可以先给定 Y 落在 y₀ 附近的小区间，再让区间收窄来理解这个定义。</p>
+    <p class="source-note">中文讲义第 19 页已有窄条极限解释。补充核对：<a href="https://textbook.prob140.org/notebooks-md/17_03_Marginal_and_Conditional_Densities.html" target="_blank" rel="noopener noreferrer">Berkeley Probability for Data Science · 17.3</a>。这段解释不作为老师逐字原话。</p>
+  </details>
+  <p class="source-note">定义与分母条件：课堂 00:44:40；中文讲义第 18 页。截面归一化：课堂 01:24:50，另见文末说明。</p>
+  <p class="bridge">把公式乘回去，一个边缘加上相应条件，就能构造联合。于是也能换一个给定方向。</p>
+</section>
+
+<section class="reading-section" id="reverse" aria-labelledby="reverse-title">
+  <span class="section-number">04 · 换个方向再看</span>
+  <h2 id="reverse-title">知道 X｜Y，怎样转向 Y｜X？</h2>
+  <p>先用已知的边缘和条件还原联合，再求新方向需要的边缘，最后做除法。每一步都带着原来的非零区域。</p>
+  <math-tex display="block">f_{X,Y}(x,y)=f_Y(y)f_{X\mid Y}(x\mid y)</math-tex>
+  <p class="bridge">边缘 × 条件 → 联合 → 另一个边缘 → 反向条件</p>
+  <details>
+    <summary>展开课堂的反向条件例题</summary>
+    <p>这次换了一道题。已知 <math-tex>f_Y(y)=3y^2</math-tex>，以及 <math-tex>f_{X\mid Y}(x\mid y)=2x/y^2</math-tex>，非零区域为 <math-tex>0&lt;x&lt;y&lt;1</math-tex>。</p>
+    <p>① 相乘得到联合密度 <math-tex>6x</math-tex>，区域仍是 <math-tex>0&lt;x&lt;y&lt;1</math-tex>。</p>
+    <p>② 固定 x 后，y 从 x 到 1：</p>
+    <math-tex display="block">f_X(x)=\int_x^1 6x\,dy=6x(1-x),\quad 0&lt;x&lt;1</math-tex>
+    <p>③ 给定 <math-tex>X=x_0</math-tex>，其中 <math-tex>0&lt;x_0&lt;1</math-tex>：</p>
+    <math-tex display="block">f_{Y\mid X}(y\mid x_0)=\begin{cases}\dfrac{1}{1-x_0},&amp;x_0&lt;y&lt;1,\\0,&amp;\text{其他}.\end{cases}</math-tex>
+    <p>老师在 01:18:31 纠正画图方向，01:19:23 改为从 x 到 1 积分。前面的 0 到 x 不是最后采用的范围。</p>
+    <p class="source-note">课堂例题始于 01:08:30；PPT 第 23–27 页；中文讲义第 21–22 页。与上一题同样，不能在分母为零的端点直接套用比值公式。</p>
+  </details>
+</section>
+
+<details id="normal">
+  <summary>课末：二维正态为什么也能这样看？</summary>
+  <p>老师在 01:24:50 用曲面和截面作直观介绍。给定一个变量后，先取截面，再归一化，所得条件分布仍是正态。本次课堂没有完整证明；中文讲义第 22–23 页另外提供了推导。</p>
+  <p class="note"><span class="source-label">整理校核</span>中文讲义第 23 页的图文把原始截线直接叫作条件密度，省略了归一化这一步。准确说法应是：截线给出联合密度的一段形状，还需除以对应边缘密度。这与课堂的归一化提醒一致。</p>
+  <p class="source-note">PPT 第 28–31 页；<a href="https://textbook.prob140.org/notebooks-md/17_03_Marginal_and_Conditional_Densities.html" target="_blank" rel="noopener noreferrer">Berkeley 17.3 的截面与归一化说明</a>可帮助理解这个区别。</p>
+</details>
+
+<details id="sources">
+  <summary>资料与补充说明</summary>
+  <p>本页按已有课堂勘察和转录组织阅读主线，解释以 PPT 和中文讲义为底稿。箭头文字、衔接句与校核说明是整理表述。</p>
+  <ul>
+    <li>课堂转录：<code>10.29概率.txt</code>。开头约 5 分钟未录到；本页时间戳仍按现存录音起点计算，不另加 5 分钟。</li>
+    <li>PPT：<code>Chapter3-Slide2(1).pdf</code>，32 页。</li>
+    <li>中文讲义：<code>Chapter3(1).pdf</code>，48 页。本页所用物理页码与印刷页码一致；两张原文片段已经嵌在页面内。</li>
+    <li>外部定义校核：<a href="https://online.stat.psu.edu/stat414/Lesson20" target="_blank" rel="noopener noreferrer">Penn State · STAT 414 Lesson 20</a>，边缘密度与条件密度。</li>
+    <li>外部直观补充：<a href="https://textbook.prob140.org/notebooks-md/17_03_Marginal_and_Conditional_Densities.html" target="_blank" rel="noopener noreferrer">Berkeley · Probability for Data Science 17.3</a>，固定条件、密度比值与归一化。</li>
+  </ul>
+  <p>外部资料于 2026-10-29 核对，用来补清数学理解，不用来推断老师实际讲过什么。没有原始录音链接，因此时间戳仅供对照。</p>
+</details>
